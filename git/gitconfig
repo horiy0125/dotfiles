@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+        name = horiy0125
+        email = kh1520.shsf@gmail.com
+
+[alias]
+        st = status
+        l = log
+        b = branch
+        sw = switch
+        a = add
+        ps = push
+        pl = pull
+        m = merge
+        cm = commit
+        sts = stash
+        f = fetch
+        cl = clone
+
+[pull]
+	rebase = false
