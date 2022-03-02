@@ -184,7 +184,7 @@ echo 'install vscode extensions? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
-    sh ./vscode/install-extensions.sh
+    sh ./vscode/install-extensions-for-macos.sh
 
     echo 'installed vscode extensions';;
   * ) echo 'skip installing vscode extensions';;
