@@ -16,7 +16,8 @@ echo ''
 echo '----------------------------------------------------------------'
 echo ''
 
-echo 'start setup? [Y/n]'
+
+echo 'Do you want to start setup? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
@@ -54,7 +55,7 @@ fi
 
 echo '----------------------------------------------------------------'
 
-echo 'install homebrew? [Y/n]'
+echo 'Do you want to install homebrew? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
@@ -66,12 +67,15 @@ esac
 
 echo '----------------------------------------------------------------'
 
-echo 'install postgres? [Y/n]'
+echo 'Do you want to install postgres? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
     brew install postgresql
-    echo '' >> ~/.zshrc
+
+    if [ -d ~/.zshrc ]; then
+      echo '' >> ~/.zshrc
+    fi
     echo '# postgres' >> ~/.zshrc
     echo 'export PGDATA=/usr/local/var/postgres' >> ~/.zshrc
 
@@ -81,11 +85,12 @@ esac
 
 echo '----------------------------------------------------------------'
 
-echo 'install nodenv? [Y/n]'
+echo 'Do you want to install nodenv? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
     git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+
     echo '' >> ~/.zshrc
     echo '# nodenv' >> ~/.zshrc
     echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
@@ -103,12 +108,15 @@ esac
 
 echo '----------------------------------------------------------------'
 
-echo 'install pyenv? [Y/n]'
+echo 'Do you want to install pyenv? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-    echo '' >> ~/.zprofile
+
+    if [ -d ~/.zprofile ]; then
+      echo '' >> ~/.zprofile
+    fi
     echo '# pyenv' >> ~/.zprofile
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
     echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
@@ -126,7 +134,7 @@ esac
 
 echo '----------------------------------------------------------------'
 
-echo 'install python libraries via pip3? [Y/n]'
+echo 'Do you want to install python libraries via pip3? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
@@ -139,7 +147,7 @@ esac
 
 echo '----------------------------------------------------------------'
 
-echo 'install rbenv? [Y/n]'
+echo 'Do you want to install rbenv? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
@@ -150,7 +158,7 @@ case $ANSWER in
     echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
 
     git clone https://github.com/rbenv/ruby-build.git
-    sudo $ PREFIX=/usr/local ./ruby-build/install.sh
+    sudo PREFIX=/usr/local ./ruby-build/install.sh
     rm -rf ./ruby-build
 
     source ~/.zshrc
@@ -161,12 +169,15 @@ esac
 
 echo '----------------------------------------------------------------'
 
-echo 'install goenv? [Y/n]'
+echo 'Do you want to install goenv? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
     git clone https://github.com/syndbg/goenv.git ~/.goenv
-    echo '' >> ~/.zshenv
+
+    if [ -d ~/.zshenv ]; then
+      echo '' >> ~/.zshenv
+    fi
     echo '# goenv' >> ~/.zshenv
     echo 'export GOENV_ROOT="$HOME/.goenv"' >> ~/.zshenv
     echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.zshenv
@@ -180,7 +191,7 @@ esac
 
 echo '----------------------------------------------------------------'
 
-echo 'install vscode extensions? [Y/n]'
+echo 'Do you want to install vscode extensions? [Y/n]'
 read ANSWER
 case $ANSWER in
   "" | "Y" | "y" )
