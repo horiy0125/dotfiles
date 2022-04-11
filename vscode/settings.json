@@ -17,9 +17,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "go.gocodeAutoBuild": true,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
   "go.toolsManagement.autoUpdate": true,
   "workbench.startupEditor": "none",
   "vsicons.dontShowNewVersionMessage": true,
