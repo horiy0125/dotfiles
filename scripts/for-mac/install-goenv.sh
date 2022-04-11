@@ -18,24 +18,27 @@ echo ''
 cd ~/
 
 echo ''
-echo '=== 1. postgres のインストール ==='
+echo '=== 1. goenv のインストール ==='
 echo ''
 
-brew install postgresql
+git clone https://github.com/syndbg/goenv.git ~/.goenv
+
 
 echo ''
-echo '=== END 1. postgres のインストール ==='
+echo '=== END 1. goenv のインストール ==='
 echo ''
 
 echo ''
 echo '=== 2. PATH の設定 ==='
 echo ''
 
-if [ -f ~/.zshrc ]; then
-  echo '' >> ~/.zshrc
+if [ -f ~/.zshenv ]; then
+  echo '' >> ~/.zshenv
 fi
-echo '# postgres' >> ~/.zshrc
-echo 'export PGDATA=/usr/local/var/postgres' >> ~/.zshrc
+echo '# goenv' >> ~/.zshenv
+echo 'export GOENV_ROOT="$HOME/.goenv"' >> ~/.zshenv
+echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.zshenv
+echo 'eval "$(goenv init -)"' >> ~/.zshenv
 
 echo ''
 echo '=== END 2. PATH の設定 ==='

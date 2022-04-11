@@ -25,7 +25,6 @@ if [ -d ./workspace ]; then
   echo 'workspace ディレクトリが既に存在するため、作成をスキップしました'
 else
   mkdir workspace
-  echo 'workspace ディレクトリを作成しました'
 fi
 
 echo ''
@@ -42,7 +41,6 @@ if [ -d ./dotfiles ]; then
   echo 'dotfiles リポジトリが既に存在するため、クローンをスキップしました'
 else
   git clone https://github.com/horiy0125/dotfiles.git
-  echo 'dotfiles リポジトリのクローンが完了しました'
 fi
 
 echo ''
@@ -58,8 +56,7 @@ cd dotfiles
 if [ -f ~/.gitconfig ]; then
   echo '.gitconfig が既に存在するため、作成をスキップしました'
 else
-  cp ./git/gitconfig ~/.gitconfig
-  echo '.gitconfig の作成が完了しました'
+  cat ./git/gitconfig > ~/.gitconfig
 fi
 
 echo ''

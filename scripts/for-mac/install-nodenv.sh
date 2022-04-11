@@ -18,25 +18,38 @@ echo ''
 cd ~/
 
 echo ''
-echo '=== 1. postgres のインストール ==='
+echo '=== 1. nodenv のインストール ==='
 echo ''
 
-brew install postgresql
+git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 
 echo ''
-echo '=== END 1. postgres のインストール ==='
+echo '=== END 1. nodenv のインストール ==='
 echo ''
 
 echo ''
-echo '=== 2. PATH の設定 ==='
+echo '=== 2. node-build のインストール ==='
+echo ''
+
+git clone https://github.com/nodenv/node-build.git
+sudo PREFIX=/usr/local ./node-build/install.sh
+rm -rf ./node-build
+
+echo ''
+echo '=== END 2. node-build のインストール ==='
+echo ''
+
+echo ''
+echo '=== 3. PATH の設定 ==='
 echo ''
 
 if [ -f ~/.zshrc ]; then
   echo '' >> ~/.zshrc
 fi
-echo '# postgres' >> ~/.zshrc
-echo 'export PGDATA=/usr/local/var/postgres' >> ~/.zshrc
+echo '# nodenv' >> ~/.zshrc
+echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(nodenv init -)"' >> ~/.zshrc
 
 echo ''
-echo '=== END 2. PATH の設定 ==='
+echo '=== END 3. PATH の設定 ==='
 echo ''

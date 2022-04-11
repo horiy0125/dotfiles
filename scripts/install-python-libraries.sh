@@ -18,25 +18,22 @@ echo ''
 cd ~/
 
 echo ''
-echo '=== 1. postgres のインストール ==='
+echo '=== 1. pip3 のアップデート ==='
 echo ''
 
-brew install postgresql
+python3 -m pip install --upgrade pip
 
 echo ''
-echo '=== END 1. postgres のインストール ==='
+echo '=== END 1. pip3 のアップデート ==='
 echo ''
 
 echo ''
-echo '=== 2. PATH の設定 ==='
+echo '=== 2. python ライブラリのインストール ==='
 echo ''
 
-if [ -f ~/.zshrc ]; then
-  echo '' >> ~/.zshrc
-fi
-echo '# postgres' >> ~/.zshrc
-echo 'export PGDATA=/usr/local/var/postgres' >> ~/.zshrc
+cd ./workspace/dotfiles
+pip3 install -r ./pip3/requirements.txt
 
 echo ''
-echo '=== END 2. PATH の設定 ==='
+echo '=== END 2. python ライブラリのインストール ==='
 echo ''

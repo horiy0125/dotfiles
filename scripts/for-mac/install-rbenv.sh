@@ -18,25 +18,38 @@ echo ''
 cd ~/
 
 echo ''
-echo '=== 1. postgres のインストール ==='
+echo '=== 1. rbenv のインストール ==='
 echo ''
 
-brew install postgresql
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
 echo ''
-echo '=== END 1. postgres のインストール ==='
+echo '=== END 1. rbenv のインストール ==='
 echo ''
 
 echo ''
-echo '=== 2. PATH の設定 ==='
+echo '=== 2. ruby-build のインストール ==='
+echo ''
+
+git clone https://github.com/rbenv/ruby-build.git
+sudo PREFIX=/usr/local ./ruby-build/install.sh
+rm -rf ./ruby-build
+
+echo ''
+echo '=== END 2. ruby-build のインストール ==='
+echo ''
+
+echo ''
+echo '=== 3. PATH の設定 ==='
 echo ''
 
 if [ -f ~/.zshrc ]; then
   echo '' >> ~/.zshrc
 fi
-echo '# postgres' >> ~/.zshrc
-echo 'export PGDATA=/usr/local/var/postgres' >> ~/.zshrc
+echo '# rbenv' >> ~/.zshrc
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
 
 echo ''
-echo '=== END 2. PATH の設定 ==='
+echo '=== END 3. PATH の設定 ==='
 echo ''

@@ -18,24 +18,32 @@ echo ''
 cd ~/
 
 echo ''
-echo '=== 1. postgres のインストール ==='
+echo '=== 1. pyenv のインストール ==='
 echo ''
 
-brew install postgresql
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 echo ''
-echo '=== END 1. postgres のインストール ==='
+echo '=== END 1. pyenv のインストール ==='
 echo ''
 
 echo ''
 echo '=== 2. PATH の設定 ==='
 echo ''
 
+if [ -f ~/.zprofile ]; then
+  echo '' >> ~/.zprofile
+fi
+echo '# pyenv' >> ~/.zprofile
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
+echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+
 if [ -f ~/.zshrc ]; then
   echo '' >> ~/.zshrc
 fi
-echo '# postgres' >> ~/.zshrc
-echo 'export PGDATA=/usr/local/var/postgres' >> ~/.zshrc
+echo '# pyenv' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 echo ''
 echo '=== END 2. PATH の設定 ==='

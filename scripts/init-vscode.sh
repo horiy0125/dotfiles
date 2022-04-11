@@ -33,7 +33,6 @@ echo '=== 2. settings.json の作成 ==='
 echo ''
 
 cat ./vscode/settings.json > ~/Library/"Application Support"/Code/User/settings.json
-echo 'settings.json の作成が完了しました'
 
 echo ''
 echo '=== END 2. settings.json の作成 ==='
