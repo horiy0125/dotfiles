@@ -31,12 +31,18 @@ echo ''
 echo '=== 2. PATH の設定 ==='
 echo ''
 
-if [ -f ~/.zprofile ]; then
-  echo '' >> ~/.zshrc
+if [ `arch` = "arm64" ]; then
+  if [ -f ~/.zprofile ]; then
+    echo '' >> ~/.zshrc
+  fi
+  echo '# homebrew' >> ~/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  echo 'PATHの設定が完了しましたが、Rosettaが有効化されていないようです'
+else
+  echo 'Apple M1アーキテクチャではないのでPATHの設定をスキップしました'
 fi
-echo '# homebrew' >> ~/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo ''
 echo '=== END 2. PATH の設定 ==='
