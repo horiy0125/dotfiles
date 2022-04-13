@@ -18,11 +18,26 @@ echo ''
 cd ~/
 
 echo ''
-echo '=== Homebrew のインストール ==='
+echo '=== 1. Homebrew のインストール ==='
 echo ''
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo ''
-echo '=== END Homebrew のインストール ==='
+echo '=== END 1. Homebrew のインストール ==='
+echo ''
+
+echo ''
+echo '=== 2. PATH の設定 ==='
+echo ''
+
+if [ -f ~/.zprofile ]; then
+  echo '' >> ~/.zshrc
+fi
+echo '# homebrew' >> ~/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+echo ''
+echo '=== END 2. PATH の設定 ==='
 echo ''

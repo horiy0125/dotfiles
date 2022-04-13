@@ -52,12 +52,7 @@ echo '=== 3. ~/.gitconfig の作成　==='
 echo ''
 
 cd dotfiles
-
-if [ -f ~/.gitconfig ]; then
-  echo '.gitconfig が既に存在するため、作成をスキップしました'
-else
-  cat ./git/gitconfig > ~/.gitconfig
-fi
+cat ./git/gitconfig > ~/.gitconfig
 
 echo ''
 echo '=== END 3. ~/.gitconfig の作成　==='
