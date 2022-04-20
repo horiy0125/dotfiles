@@ -74,6 +74,7 @@ echo ''
 echo '=== 2. settings.json の作成 ==='
 echo ''
 
+cd ./workspace/dotfiles
 cat ./vscode/settings.json > ~/Library/"Application Support"/Code/User/settings.json
 
 echo ''
