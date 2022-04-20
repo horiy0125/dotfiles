@@ -24,7 +24,7 @@ echo ''
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 echo ''
-echo '=== END 1. pyenv のインストール ==='
+echo '=== 1. END pyenv のインストール ==='
 echo ''
 
 echo ''
@@ -46,5 +46,5 @@ echo '# pyenv' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 echo ''
-echo '=== END 2. PATH の設定 ==='
+echo '=== 2. END PATH の設定 ==='
 echo ''

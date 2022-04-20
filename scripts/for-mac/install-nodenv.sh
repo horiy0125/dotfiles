@@ -24,7 +24,7 @@ echo ''
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 
 echo ''
-echo '=== END 1. nodenv のインストール ==='
+echo '=== 1. END nodenv のインストール ==='
 echo ''
 
 echo ''
@@ -36,7 +36,7 @@ sudo PREFIX=/usr/local ./node-build/install.sh
 rm -rf ./node-build
 
 echo ''
-echo '=== END 2. node-build のインストール ==='
+echo '=== 2. END node-build のインストール ==='
 echo ''
 
 echo ''
@@ -51,5 +51,5 @@ echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(nodenv init -)"' >> ~/.zshrc
 
 echo ''
-echo '=== END 3. PATH の設定 ==='
+echo '=== 3. END PATH の設定 ==='
 echo ''

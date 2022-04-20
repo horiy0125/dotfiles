@@ -28,7 +28,7 @@ else
 fi
 
 echo ''
-echo '=== END 1. ~/workspace ディレクトリの作成 ==='
+echo '=== 1. END ~/workspace ディレクトリの作成 ==='
 echo ''
 
 cd workspace
@@ -44,7 +44,7 @@ else
 fi
 
 echo ''
-echo '=== END 2. dotfiles リポジトリのクローン ==='
+echo '=== 2. END dotfiles リポジトリのクローン ==='
 echo ''
 
 echo ''
@@ -55,5 +55,5 @@ cd dotfiles
 cat ./git/gitconfig > ~/.gitconfig
 
 echo ''
-echo '=== END 3. ~/.gitconfig の作成　==='
+echo '=== 3. END ~/.gitconfig の作成　==='
 echo ''

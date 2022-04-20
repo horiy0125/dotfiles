@@ -25,7 +25,7 @@ git clone https://github.com/syndbg/goenv.git ~/.goenv
 
 
 echo ''
-echo '=== END 1. goenv のインストール ==='
+echo '=== 1. END goenv のインストール ==='
 echo ''
 
 echo ''
@@ -41,5 +41,5 @@ echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.zshenv
 echo 'eval "$(goenv init -)"' >> ~/.zshenv
 
 echo ''
-echo '=== END 2. PATH の設定 ==='
+echo '=== 2. END PATH の設定 ==='
 echo ''

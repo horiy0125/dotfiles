@@ -24,7 +24,7 @@ echo ''
 brew install postgresql
 
 echo ''
-echo '=== END 1. postgres のインストール ==='
+echo '=== 1. END postgres のインストール ==='
 echo ''
 
 echo ''
@@ -38,5 +38,5 @@ echo '# postgres' >> ~/.zshrc
 echo 'export PGDATA=/usr/local/var/postgres' >> ~/.zshrc
 
 echo ''
-echo '=== END 2. PATH の設定 ==='
+echo '=== 2. END PATH の設定 ==='
 echo ''

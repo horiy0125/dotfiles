@@ -24,7 +24,7 @@ echo ''
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo ''
-echo '=== END 1. Homebrew のインストール ==='
+echo '=== 1. END Homebrew のインストール ==='
 echo ''
 
 echo ''
@@ -45,5 +45,5 @@ else
 fi
 
 echo ''
-echo '=== END 2. PATH の設定 ==='
+echo '=== 2. END PATH の設定 ==='
 echo ''

@@ -24,7 +24,7 @@ echo ''
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
 echo ''
-echo '=== END 1. rbenv のインストール ==='
+echo '=== 1. END rbenv のインストール ==='
 echo ''
 
 echo ''
@@ -36,7 +36,7 @@ sudo PREFIX=/usr/local ./ruby-build/install.sh
 rm -rf ./ruby-build
 
 echo ''
-echo '=== END 2. ruby-build のインストール ==='
+echo '=== 2. END ruby-build のインストール ==='
 echo ''
 
 echo ''
@@ -51,5 +51,5 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
 
 echo ''
-echo '=== END 3. PATH の設定 ==='
+echo '=== 3. END PATH の設定 ==='
 echo ''

@@ -24,7 +24,7 @@ echo ''
 python3 -m pip install --upgrade pip
 
 echo ''
-echo '=== END 1. pip3 のアップデート ==='
+echo '=== 1. END pip3 のアップデート ==='
 echo ''
 
 echo ''
@@ -35,5 +35,5 @@ cd ./workspace/dotfiles
 pip3 install -r ./pip3/requirements.txt
 
 echo ''
-echo '=== END 2. python ライブラリのインストール ==='
+echo '=== 2. END python ライブラリのインストール ==='
 echo ''
