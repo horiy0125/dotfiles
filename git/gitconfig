@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
         name = horiy0125
-        email = kh1520.shsf@gmail.com
+        email = k.horiy0125@gmail.com
 
 [alias]
         st = status
