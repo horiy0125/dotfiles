@@ -76,7 +76,7 @@ echo '=== 2. settings.json の作成 ==='
 echo ''
 
 cd ./workspace/dotfiles
-cat ./vscode/settings.json > /mnt/c/Users/horri/AppData/Roaming/Code/User/settings.json
+cat ./vscode/settings.json > /mnt/c/Users/khori/AppData/Roaming/Code/User/settings.json
 
 echo ''
 echo '=== 2. END settings.json の作成 ==='
