@@ -65,5 +65,5 @@ sudo apt install build-essential
 sudo apt install libssl-dev zlib1g-dev
 
 echo ''
-echo '=== 4. END 関連のインストール ==='
+echo '=== 4. END 関連パッケージのインストール ==='
 echo ''
