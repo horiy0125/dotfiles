@@ -15,33 +15,24 @@ echo '                                                       /_/      '
 echo ''
 echo ''
 
-cd ~/
+cd ~/workspace/dotfiles
 
 echo ''
-echo '=== 1. goenv のインストール ==='
+echo '=== 1. pip3 のアップデート ==='
 echo ''
 
-git clone https://github.com/syndbg/goenv.git ~/.goenv
-
-
-echo ''
-echo '=== 1. END goenv のインストール ==='
-echo ''
+python3 -m pip install --upgrade pip
 
 echo ''
-echo '=== 2. PATH の設定 ==='
+echo '=== 1. END pip3 のアップデート ==='
 echo ''
 
-if [ -f ~/.bashrc ]; then
-  echo '' >> ~/.bashrc
-fi
-echo '# goenv' >> ~/.bashrc
-echo 'export GOENV_ROOT="$HOME/.goenv"' >> ~/.bashrc
-echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(goenv init -)"' >> ~/.bashrc
-echo 'export PATH="$GOROOT/bin:$PATH"' >> ~/.bashrc
-echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bashrc
+echo ''
+echo '=== 2. python ライブラリのインストール ==='
+echo ''
+
+pip3 install -r ./pip3/requirements.txt
 
 echo ''
-echo '=== 2. END PATH の設定 ==='
+echo '=== 2. END python ライブラリのインストール ==='
 echo ''

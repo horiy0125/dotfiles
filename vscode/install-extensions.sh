@@ -1,26 +1,5 @@
 #!/bin/bash
 
-echo '    __               _       ____ ______   ______               '
-echo '   / /_  ____  _____(_)_  __/ __ <  /__ \ / ____/               '
-echo '  / __ \/ __ \/ ___/ / / / / / / / /__/ //___ \                 '
-echo ' / / / / /_/ / /  / / /_/ / /_/ / // __/____/ /                 '
-echo '/_/ /_/\____/_/  /_/\__, /\____/_//____/_____/                  '
-echo '       __      __  /____/__                       __            '
-echo '  ____/ /___  / /_/ __(_) /__  _____   ________  / /___  ______ '
-echo ' / __  / __ \/ __/ /_/ / / _ \/ ___/  / ___/ _ \/ __/ / / / __ \'
-echo '/ /_/ / /_/ / /_/ __/ / /  __(__  )  (__  )  __/ /_/ /_/ / /_/ /'
-echo '\__,_/\____/\__/_/ /_/_/\___/____/  /____/\___/\__/\__,_/ .___/ '
-echo '                                                       /_/      '
-
-echo ''
-echo ''
-
-cd ~/
-
-echo ''
-echo '=== 1. VSCode Extensions のインストール ==='
-echo ''
-
 code --install-extension ardenivanov.svelte-intellisense
 code --install-extension burkeholland.simple-react-snippets
 code --install-extension castwide.solargraph
@@ -66,18 +45,3 @@ code --install-extension vscode-icons-team.vscode-icons
 code --install-extension wingrunr21.vscode-ruby
 code --install-extension xabikos.javascriptsnippets
 code --install-extension xabikos.reactsnippets
-
-echo ''
-echo '=== 1. END VSCode Extensions のインストール ==='
-echo ''
-
-echo ''
-echo '=== 2. settings.json の作成 ==='
-echo ''
-
-cd ./workspace/dotfiles
-cat ./vscode/settings.json > /mnt/c/Users/khori/AppData/Roaming/Code/User/settings.json
-
-echo ''
-echo '=== 2. END settings.json の作成 ==='
-echo ''
