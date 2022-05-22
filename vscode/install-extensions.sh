@@ -30,7 +30,7 @@ code --install-extension ms-ceintl.vscode-language-pack-ja
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
 code --install-extension ms-vscode.cpptools
-# code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension njqdev.vscode-python-typehint
 code --install-extension octref.vetur
 code --install-extension prisma.prisma
