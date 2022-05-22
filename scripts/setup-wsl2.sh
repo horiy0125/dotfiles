@@ -37,7 +37,8 @@ sudo apt install -y \
   tk-dev \
   gcc \
   postgresql \
-  postgresql-contrib
+  postgresql-contrib \
+  net-tools
 
 echo ''
 echo '=== 1. END パッケージのインストール ==='
