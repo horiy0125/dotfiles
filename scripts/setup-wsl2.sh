@@ -38,7 +38,8 @@ sudo apt install -y \
   gcc \
   postgresql \
   postgresql-contrib \
-  net-tools
+  net-tools \
+  unzip
 
 echo ''
 echo '=== 1. END パッケージのインストール ==='
