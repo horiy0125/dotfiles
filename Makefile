@@ -9,3 +9,10 @@ setup-macos:
 .PHONY: setup-pip3
 setup-pip3:
 	sh pip3/setup.sh
+
+.PHONY: install-yarn
+	npm install -g yarn
+
+.PHONY: install-gems
+	gem install bundler
+	gem install rails -v 6.1.5.1
