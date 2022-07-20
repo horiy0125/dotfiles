@@ -26,6 +26,7 @@ code --install-extension styled-components.vscode-styled-components
 code --install-extension karunamurti.haml
 code --install-extension kevinrose.vsc-python-indent
 code --install-extension magicstack.magicpython
+code --install-extension marp-team.marp-vscode
 code --install-extension ms-ceintl.vscode-language-pack-ja
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance

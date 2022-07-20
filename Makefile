@@ -15,4 +15,5 @@ setup-pip3:
 
 .PHONY: install-gems
 	gem install bundler
+	gem install solargraph
 	gem install rails -v 6.1.5.1
